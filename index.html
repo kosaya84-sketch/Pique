@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HÉAVEN ROOM - GOD MODE V3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --p: #00f2ff; --s: #7000ff; --bg: #020205; --surf: #0a0a12; --brd: rgba(255, 255, 255, 0.05); }
+        #full-intro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: 0.8s; }
+        .hidden { opacity: 0; pointer-events: none; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; display: flex; justify-content: center; overflow-x: hidden; }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(112, 0, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(112, 0, 255, 0.03) 1px, transparent 1px); background-size: 40px 40px; z-index: -1; }
+        .container { width: 100%; max-width: 420px; padding: 30px 20px; }
+        .brand-header { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
+        .header-media-box { width: 65px; height: 65px; border: 1px solid var(--p); background: #000; overflow: hidden; box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); }
+        .header-media-box img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: 0.3s; }
+        .brand-tag { font-family: 'Syncopate'; font-size: 8px; color: var(--p); letter-spacing: 4px; }
+        .brand-title { font-family: 'Syncopate'; font-size: 22px; font-weight: 700; text-transform: uppercase; }
+        .brand-title span { color: transparent; -webkit-text-stroke: 1px #fff; }
+        .about-block { background: var(--surf); padding: 25px; border-radius: 0 20px 0 20px; border-right: 4px solid var(--s); margin-bottom: 50px; border: 1px solid var(--brd); }
+        .about-block p { font-size: 12px; line-height: 1.8; color: #a0a0a0; }
+        .db-btn { text-decoration: none; display: flex; align-items: center; justify-content: center; background: rgba(0, 242, 255, 0.05); border: 1px solid var(--p); padding: 15px; border-radius: 4px; color: var(--p); font-family: 'Syncopate'; font-size: 10px; letter-spacing: 2px; margin-bottom: 50px; }
+        .section-label { font-family: 'Syncopate'; font-size: 10px; color: #444; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        .section-label::after { content: ""; flex: 1; height: 1px; background: #1a1a1a; }
+        .org-wrap { display: flex; flex-direction: column; gap: 12px; margin-bottom: 50px; }
+        .row-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .card { background: #0d0d18; border: 1px solid var(--brd); padding: 15px; }
+        .l-1 { padding: 30px; border-top: 3px solid var(--s); }
+        .name { font-weight: 800; text-transform: uppercase; font-size: 11px; color: #eee; }
+        .job { font-size: 8px; color: #555; text-transform: uppercase; margin-top: 4px; }
+        .archive-scroll { display: flex; overflow-x: auto; gap: 15px; padding-bottom: 20px; scrollbar-width: none; }
+        .archive-card { min-width: 220px; aspect-ratio: 4/5; background: #0d0d18; position: relative; border: 1px solid var(--brd); }
+        .archive-card img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* God Mode Styles */
+        [contenteditable="true"] { border: 1px dashed var(--p) !important; outline: none; background: rgba(0, 242, 255, 0.05); }
+        .admin-controls { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 10000; gap: 10px; flex-direction: column; }
+        .admin-btn { padding: 12px; background: var(--s); color: #fff; border: none; font-family: 'Syncopate'; font-size: 9px; cursor: pointer; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .del-poster { position: absolute; top: 10px; right: 10px; background: #ff0055; color: white; border: none; width: 25px; height: 25px; border-radius: 50%; cursor: pointer; display: none; z-index: 50; }
+    </style>
+</head>
+<body>
+
+    <img src="aftergift.png" style="display:none;">
+
+    <div id="full-intro">
+        <div style="text-align: center;">
+            <img src="thegift.gif" style="width: 100px; margin-bottom: 20px;">
+            <p style="font-family: 'Syncopate'; font-size: 8px; color: #333; letter-spacing: 5px;">CORE_INIT</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="brand-header">
+            <div class="header-media-box"><img id="header-media" src=""></div>
+            <div>
+                <span class="brand-tag">Network Phase.02</span>
+                <h1 class="brand-title">HÉAVEN<span>ROOM</span></h1>
+            </div>
+        </div>
+
+        <div class="about-block"><p>// Mengaktifkan protokol solidaritas tinggi. Marga digital yang fokus pada pengembangan bakat.</p></div>
+
+        <a href="murid.html" class="db-btn">ACCESS_STUDENT_DB ></a>
+
+        <div class="section-label">Organization.Sys</div>
+        <div class="org-wrap">
+            <div class="card l-1"><div class="name">Nama Wali Kelas</div><div class="job">Head Command</div></div>
+            
+            <div class="row-grid">
+                <div class="card"><div class="name">Nama KM</div><div class="job">Lead Monitor</div></div>
+                <div class="card"><div class="name">Nama WKM</div><div class="job">Sub Monitor</div></div>
+            </div>
+
+            <div class="row-grid">
+                <div class="card"><div class="name">Sekretaris 1</div><div class="job">Data_A</div></div>
+                <div class="card"><div class="name">Sekretaris 2</div><div class="job">Data_B</div></div>
+            </div>
+
+            <div class="row-grid">
+                <div class="card"><div class="name">Bendahara 1</div><div class="job">Finance_A</div></div>
+                <div class="card"><div class="name">Bendahara 2</div><div class="job">Finance_B</div></div>
+            </div>
+
+            <div class="row-grid">
+                <div class="card"><div class="name">Nama Petugas</div><div class="job">Sanitation</div></div>
+                <div class="card"><div class="name">Nama Petugas</div><div class="job">Security</div></div>
+            </div>
+        </div>
+
+        <div class="section-label">Archive.Log <button id="add-poster-btn" style="display:none; background:none; border:1px solid var(--p); color:var(--p); font-size:8px; padding:2px 8px; cursor:pointer; margin-left:10px;">+ UPLOAD</button></div>
+        <div class="archive-scroll" id="poster-container">
+            <div class="archive-card">
+                <button class="del-poster" onclick="this.parentElement.remove()">×</button>
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=400">
+            </div>
+        </div>
+
+        <div class="section-label" style="margin-top: 40px;">System.Credits</div>
+        <div class="row-grid">
+            <div class="card" onclick="startGodMode()" style="cursor: pointer;"><div class="name">YOUR_NAME</div><div class="job">Interface Designer</div></div>
+            <div class="card"><div class="name" style="color: var(--p);">GEMINI_AI</div><div class="job">System Architect</div></div>
+        </div>
+    </div>
+
+    <div class="admin-controls" id="admin-ui">
+        <button class="admin-btn" onclick="exportCode()">GET_SOURCE_CODE</button>
+        <button class="admin-btn" style="background: #333;" onclick="location.reload()">EXIT_GOD_MODE</button>
+    </div>
+
+    <script>
+        const IMGBB_API_KEY = "TARUH_API_KEY_IMGBB_DISINI";
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('full-intro').classList.add('hidden');
+                const hm = document.getElementById('header-media');
+                hm.src = "thegift.gif"; hm.style.opacity = "1";
+                setTimeout(() => { hm.src = "aftergift.png"; }, 1200);
+            }, 3000);
+        });
+
+        function startGodMode() {
+            const pass = prompt("ENTER ACCESS KEY:");
+            if (pass === "ADMIN#12345") {
+                alert("GOD MODE ACTIVE! Klik teks untuk ganti nama, klik + UPLOAD untuk pilih foto dari galeri HP.");
+                document.getElementById('admin-ui').style.display = 'flex';
+                document.getElementById('add-poster-btn').style.display = 'inline-block';
+                document.querySelectorAll('.name, .job, .brand-title, .about-block p').forEach(el => el.contentEditable = "true");
+                document.querySelectorAll('.del-poster').forEach(b => b.style.display = 'block');
+            }
+        }
+
+        document.getElementById('add-poster-btn').onclick = () => {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file'; fileInput.accept = 'image/*';
+            fileInput.onchange = async () => {
+                const file = fileInput.files[0];
+                if (!file) return;
+                alert("Sedang mengupload ke ImgBB...");
+                const formData = new FormData();
+                formData.append('image', file);
+                try {
+                    const res = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, { method: 'POST', body: formData });
+                    const result = await res.json();
+                    if (result.success) {
+                        const div = document.createElement('div');
+                        div.className = 'archive-card';
+                        div.innerHTML = `<button class="del-poster" style="display:block" onclick="this.parentElement.remove()">×</button><img src="${result.data.url}">`;
+                        document.getElementById('poster-container').appendChild(div);
+                    }
+                } catch (e) { alert("Upload Gagal!"); }
+            };
+            fileInput.click();
+        };
+
+        function exportCode() {
+            const clone = document.documentElement.cloneNode(true);
+            clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+            clone.querySelectorAll('.del-poster, #admin-ui, #add-poster-btn').forEach(el => el.remove());
+            console.log("<!DOCTYPE html>\n" + clone.outerHTML);
+            alert("KODE TERBARU ADA DI CONSOLE (F12). Copy dan timpa file index.html di GitHub kamu!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HÉAVEN DATABASE - STUDENTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #7000ff;
+            --bg: #020205;
+            --surface: #0a0a12;
+            --border: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background-color: var(--bg); 
+            color: #fff; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex; justify-content: center;
+            overflow-x: hidden;
+        }
+
+        /* Grid Background */
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                linear-gradient(rgba(112, 0, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(112, 0, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px; z-index: -1;
+        }
+
+        .container { width: 100%; max-width: 420px; padding: 30px 20px; }
+
+        /* HEADER NAV */
+        .nav-header { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
+        .back-btn { 
+            text-decoration: none; color: #555; font-family: 'Syncopate', sans-serif; 
+            font-size: 10px; border: 1px solid #222; padding: 8px 12px; border-radius: 4px;
+        }
+        .header-title { font-family: 'Syncopate', sans-serif; font-size: 16px; color: #fff; }
+
+        /* SEARCH BAR MOCKUP */
+        .search-area {
+            background: var(--surface); border: 1px solid var(--border);
+            padding: 12px 15px; margin-bottom: 30px; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+        .search-area span { font-size: 10px; color: #444; font-family: 'Syncopate', sans-serif; }
+
+        /* STUDENT GRID */
+        .student-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        
+        .student-card {
+            background: #0d0d18; border: 1px solid var(--border);
+            padding: 15px; position: relative; overflow: hidden;
+        }
+        .student-card::after {
+            content: ""; position: absolute; top: 0; right: 0;
+            width: 0; height: 0; border-style: solid;
+            border-width: 0 10px 10px 0; border-color: transparent var(--secondary) transparent transparent;
+        }
+
+        .id-num { font-family: 'Syncopate', sans-serif; font-size: 8px; color: var(--primary); margin-bottom: 10px; display: block; }
+        .student-name { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; color: #eee; }
+        .student-status { font-size: 8px; color: #444; letter-spacing: 1px; text-transform: uppercase; }
+
+        .footer-log { text-align: center; font-family: 'Syncopate', sans-serif; font-size: 8px; color: #222; margin: 40px 0; letter-spacing: 5px; }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="nav-header">
+            <a href="index.html" class="back-btn">< BACK</a>
+            <h1 class="header-title">CITIZENS_DB</h1>
+        </div>
+
+        <div class="search-area">
+            <span>TOTAL_RECORDS: 33</span>
+            <span style="color: var(--primary);">ACTIVE</span>
+        </div>
+
+        <div class="student-grid">
+            <script>
+                const students = [
+                    "Aditya Pratama", "Alya Rahma", "Bagas Saputra", "Citra Lestari", 
+                    "Daffa Ramadhan", "Eka Putri", "Fajar Sidik", "Gita Permata",
+                    "Hafizh Fauzan", "Indah Sari", "Jaka Kelana", "Kania Dewi",
+                    "Luthfi Hakim", "Maya Audina", "Naufal Aziz", "Olivia Putri",
+                    "Panji Gumilang", "Qori Ananda", "Raka Siwi", "Siti Aminah",
+                    "Taufik Hidayat", "Umar Bakri", "Vina Pandu", "Wildan Kamil",
+                    "Xavier Putra", "Yuni Shara", "Zaki Anwar", "Abidzar Al",
+                    "Bella Safira", "Candra Wijaya", "Dini Aminarti", "Erlangga", "Farhan"
+                ];
+
+                const grid = document.querySelector('.student-grid');
+                students.forEach((name, index) => {
+                    let id = (index + 1).toString().padStart(2, '0');
+                    grid.innerHTML += `
+                        <div class="student-card">
+                            <span class="id-num">USR_${id}</span>
+                            <div class="student-name">${name}</div>
+                            <div class="student-status">Verified_Citizen</div>
+                        </div>
+                    `;
+                });
+            </script>
+        </div>
+
+        <p class="footer-log">[ DATABASE STABLE // 2025 ]</p>
+
+    </div>
+</body>
+</html>
