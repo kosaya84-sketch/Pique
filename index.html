@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id"><head><!-- Injected code, this is not present in original code --><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>c-toggler{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAE9JREFUOMtjYBh0gBHO+k+cSkYilcPVMpHqpIHRwIgUFERp+I8SekQ5CY8WXH7AqYWJyGglqIERV3QykaYcV7DiSSwsODw8yJIGdTPQIAQAg9gKJl7UINwAAAAASUVORK5CYII=);background-position:center;background-repeat:no-repeat;background-size:24px;position:fixed;top:0;left:0;height:30px;width:30px;background-color:#fff;-webkit-transform-origin:center;-moz-transform-origin:center;-ms-transform-origin:center;transform-origin:center;border-radius:50%;-webkit-box-shadow:-2px 2px 8px rgba(0,0,0,.4);box-shadow:-2px 2px 8px rgba(0,0,0,.4);z-index:99999;opacity:.5}c-object{color:#99f;text-decoration:underline}c-toggler:active{-webkit-box-shadow:-1px 1px 4px rgba(0,0,0,.4);box-shadow:-1px 1px 4px rgba(0,0,0,.4)}c-line{display:block}c-console{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;overflow-y:auto;position:fixed;top:0;left:0;height:100vh;width:100vw;background-color:#313131;z-index:99998;color:#eee;font-family:"Roboto",sans-serif}c-console[title]{padding-top:65px;-webkit-animation:--page-transition .1s ease 1;-moz-animation:--page-transition .1s ease 1;animation:--page-transition .1s ease 1}c-console br:last-of-type{display:none}c-console textarea{color:#fff;caret-color:currentColor !important;background-color:inherit}c-input{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:flex;width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content}c-input::before{content:">>";margin:0 5px;height:100%}#__c-input{width:100%;border:none;resize:none;height:200px;position:relative;background-color:rgba(0,0,0,0);overflow:visible}#__c-input:focus{outline:none}c-console[title]::before{position:fixed;top:0;left:0;width:100vw;background-color:inherit;z-index:999999;content:attr(title);display:-webkit-box;display:-webkit-flex;display:-moz-box;display:flex;height:44px;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;justify-content:center;font-family:Verdana,Geneva,Tahoma,sans-serif;font-weight:900;-webkit-box-shadow:0 2px 4px rgba(0,0,0,.2);box-shadow:0 2px 4px rgba(0,0,0,.2);margin-bottom:10px;color:#fff;font-size:medium}c-message{position:relative;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:flex;border-bottom:solid 1px rgba(204,204,204,.4);margin-bottom:35px;font-size:.9rem;-webkit-flex-wrap:wrap;flex-wrap:wrap}c-code{position:relative;color:#d6d3d3;font-size:1em;font-family:"Courier New",Courier,monospace;overflow-x:auto;white-space:pre;margin-bottom:0px;border:"none"}c-code::after{content:"use";background-color:#666;color:inherit;border-radius:4px;padding:0 .4rem;font-size:.6rem}c-code::before{content:">>";padding:0 5px;font-style:italic}c-key{font-size:.9rem;color:#c6f}c-message[log-level=error]{border-bottom:solid 1px rgba(255,255,255,.4);background-color:#422;color:inherit}c-message[log-level=error]::after{background-color:#cc4343;color:inherit}c-message[log-level=warn]{border-bottom:solid 1px rgba(255,255,255,.4);background-color:#633;color:inherit}c-message[log-level=warn]::after{background-color:#cc6969;color:inherit}c-stack:not(:empty){content:attr(data-stack);font-family:Verdana,Geneva,Tahoma,sans-serif;position:absolute;top:100%;right:0;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:flex;height:20px;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-moz-box-pack:justify;justify-content:space-between;width:100vw;background-color:inherit;padding:0 5px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:.8rem;color:inherit}c-text{padding:2px;white-space:pre;font-family:Verdana,Geneva,Tahoma,sans-serif;overflow:auto;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;max-width:100vw;font-size:.9rem;width:100%;padding-left:10px;white-space:break-spaces}c-text.__c-boolean{color:#8250b1}c-text.__c-number{color:#6158dd}c-text.__c-symbol{color:#6f59ac}c-text.__c-function{color:#9188a8;font-family:"Courier New",Courier,monospace;font-size:.9rem}c-text.__c-function::before{content:"ƒ";margin:0 2px;font-style:italic;color:#99f}c-text.__c-object,c-text.__c-undefined{color:#76a376}c-text.__c-string{color:#3ba13b}c-text.__c-string:not(.no-quotes)::before{content:'"';margin-right:2px}c-text.__c-string:not(.no-quotes)::after{content:'"';margin-left:2px}c-message.error c-text{overflow:unset;white-space:pre-wrap;word-break:break-word;color:#fff}c-group{display:none;margin-left:14px}c-type[type=body-toggler].__show-data+c-group{display:block}c-type[type=body-toggler]::before{display:inline-block;content:"▸";margin-right:2.5px}c-type[type=body-toggler]::after{content:"{...}"}c-type[type=body-toggler].__show-data::before{content:"▾"}c-type[type=body-toggler].__show-data::after{display:none}c-table{display:table;width:100%;border-collapse:collapse;border-spacing:0;font-size:.9rem;color:#d6d3d3;border:solid 1px rgba(204,204,204,.4)}c-table c-row{display:table-row;border-bottom:solid 1px rgba(204,204,204,.4)}c-table c-row:last-child{border-bottom:none}c-table c-row:first-child{font-weight:bold}c-table c-cell{display:table-cell;padding:5px;border-bottom:solid 1px rgba(204,204,204,.4)}c-table c-cell:not(:last-child){border-left:solid 1px rgba(204,204,204,.4)}@-webkit-keyframes --page-transition{0%{opacity:0;-webkit-transform:translate3d(0, 50%, 0);transform:translate3d(0, 50%, 0)}100%{opacity:1;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}}@-moz-keyframes --page-transition{0%{opacity:0;-moz-transform:translate3d(0, 50%, 0);transform:translate3d(0, 50%, 0)}100%{opacity:1;-moz-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}}@keyframes --page-transition{0%{opacity:0;-webkit-transform:translate3d(0, 50%, 0);-moz-transform:translate3d(0, 50%, 0);transform:translate3d(0, 50%, 0)}100%{opacity:1;-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}}</style>
+    <!-- Injected code, this is not present in original code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPL 1 2025-2028 - CORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@300;500;800&amp;display=swap" rel="stylesheet">
+    <style>
+        :root { --p: #00f2ff; --s: #7000ff; --bg: #020205; --surf: #0a0a12; --brd: rgba(255, 255, 255, 0.05); }
+        #full-intro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: 0.8s; }
+        .hidden { opacity: 0; pointer-events: none; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; display: flex; justify-content: center; overflow-x: hidden; min-height: 100vh; padding-bottom: 50px; }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(112, 0, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(112, 0, 255, 0.03) 1px, transparent 1px); background-size: 40px 40px; z-index: -1; }
+        .container { width: 100%; max-width: 420px; padding: 30px 20px; }
+        .brand-header { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
+        .header-media-box { width: 65px; height: 65px; border: 1px solid var(--p); background: #000; overflow: hidden; }
+        .header-media-box img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: 0.3s; }
+        .brand-title { font-family: 'Syncopate'; font-size: 22px; font-weight: 700; text-transform: uppercase; }
+        .brand-title span { color: transparent; -webkit-text-stroke: 1px #fff; }
+        .about-block { background: var(--surf); padding: 25px; border-radius: 0 20px 0 20px; border-right: 4px solid var(--s); margin-bottom: 50px; border: 1px solid var(--brd); }
+        .about-block p { font-size: 12px; line-height: 1.8; color: #a0a0a0; }
+        .db-btn { text-decoration: none; display: flex; align-items: center; justify-content: center; background: rgba(0, 242, 255, 0.05); border: 1px solid var(--p); padding: 15px; border-radius: 4px; color: var(--p); font-family: 'Syncopate'; font-size: 10px; letter-spacing: 2px; margin-bottom: 50px; }
+        .section-label { font-family: 'Syncopate'; font-size: 10px; color: #444; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        .section-label::after { content: ""; flex: 1; height: 1px; background: #1a1a1a; }
+        .org-wrap { display: flex; flex-direction: column; gap: 12px; margin-bottom: 50px; }
+        .row-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .card { background: #0d0d18; border: 1px solid var(--brd); padding: 15px; }
+        .name { font-weight: 800; text-transform: uppercase; font-size: 11px; color: #eee; }
+        .job { font-size: 8px; color: #555; text-transform: uppercase; margin-top: 4px; }
+        .archive-scroll { display: flex; overflow-x: auto; gap: 15px; padding-bottom: 20px; scrollbar-width: none; }
+        .archive-card { min-width: 220px; aspect-ratio: 4/5; background: #0d0d18; position: relative; border: 1px solid var(--brd); }
+        .archive-card img { width: 100%; height: 100%; object-fit: cover; }
+        .admin-controls { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 10000; gap: 10px; flex-direction: column; }
+        .admin-btn { padding: 12px; background: var(--s); color: #fff; border: none; font-family: 'Syncopate'; font-size: 9px; cursor: pointer; border-radius: 5px; }
+        .del-poster { position: absolute; top: 10px; right: 10px; background: #ff0055; color: white; border: none; width: 25px; height: 25px; border-radius: 50%; cursor: pointer; display: none; z-index: 50; }
+    </style>
+</head><c-toggler style="transform: translate(2px, 593.5px); display: none;"></c-toggler>
+<body>
+
+    <div id="full-intro" class="">
+        <div style="text-align: center;">
+            <img src="thegift.gif" style="width: 80px; margin-bottom: 20px;">
+            <p style="font-family: 'Syncopate'; font-size: 8px; color: #333; letter-spacing: 5px;">CORE_LOADING</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="brand-header">
+            <div class="header-media-box"><img id="header-media" src="aftergift.png" style="opacity: 1;"></div>
+            <div>
+                <span style="font-size: 8px; color: var(--p); font-family: 'Syncopate';">Network Phase.02</span>
+                <h1 class="brand-title">SŌFT<span>ENGINER</span></h1>
+            </div>
+        </div>
+
+        <div class="about-block"><p>"Menulis kode adalah hal yang paling dekat dengan kekuatan sihir di dunia modern saat ini."
+        -bill gates</p></div>
+
+        <a href="murid.html" class="db-btn">ACCESS_STUDENT_DB &gt;</a>
+
+        <div class="section-label">Organization.Sys</div>
+        <div class="org-wrap">
+            <div class="card" style="border-top: 2px solid var(--s); padding: 25px;"><div class="name">Nama Wali Kelas</div><div class="job">Head Command</div></div>
+            <div class="row-grid">
+                <div class="card"><div class="name">Nama KM</div><div class="job">Lead Monitor</div></div>
+                <div class="card"><div class="name">Nama WKM</div><div class="job">Sub Monitor</div></div>
+            </div>
+            <div class="row-grid">
+                <div class="card"><div class="name">Sekretaris 1</div><div class="job">Data_A</div></div>
+                <div class="card"><div class="name">Sekretaris 2</div><div class="job">Data_B</div></div>
+            </div>
+            <div class="row-grid">
+                <div class="card"><div class="name">Bendahara 1</div><div class="job">Finance_A</div></div>
+                <div class="card"><div class="name">Bendahara 2</div><div class="job">Finance_B</div></div>
+            </div>
+        </div>
+
+        <div class="section-label">Archive.Log </div>
+        <div class="archive-scroll" id="poster-container">
+            
+        <div class="archive-card"><img src="https://i.ibb.co/R4Z2V4NS/Proyek-Baru-156-Copy-Copy-9257-DEA.png"></div></div>
+
+        <div class="section-label" style="margin-top: 40px;">System.Architects</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="card" onclick="startPosterAdmin()" style="cursor: pointer; border-left: 2px solid var(--p);">
+                <div class="name" style="font-size: 10px;">ALLAH SWT</div>
+                <div class="job">terima kadih Atas segala rahmatnya</div>
+            </div>
+            <div class="row-grid">
+                <div class="card">
+                    <div class="name" style="font-size: 9px; color: var(--p);">GEMINI_AI</div>
+                    <div class="job">Core Logic</div>
+                </div>
+                <div class="card">
+                    <div class="name" style="font-size: 9px;">ENZI RAVINZA</div>
+                    <div class="job">LEAD DEVELOPMENT</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        const MY_API_KEY = "756674c6231e796028acd80be71a1ac7";
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('full-intro').classList.add('hidden');
+                const hm = document.getElementById('header-media');
+                hm.src = "thegift.gif"; hm.style.opacity = "1";
+                setTimeout(() => { hm.src = "aftergift.png"; }, 1500);
+            }, 2500);
+        });
+
+        function startPosterAdmin() {
+            const pass = prompt("POSTER ADMIN ACCESS:");
+            if (pass === "ADMIN#12345") {
+                document.getElementById('admin-ui').style.display = 'flex';
+                document.getElementById('add-poster-btn').style.display = 'inline-block';
+                document.querySelectorAll('.del-poster').forEach(b => b.style.display = 'block');
+            }
+        }
+
+        document.getElementById('add-poster-btn').onclick = () => {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file'; fileInput.accept = 'image/*';
+            fileInput.onchange = async () => {
+                const file = fileInput.files[0];
+                if (!file) return;
+                alert("Uploading...");
+                const formData = new FormData();
+                formData.append('image', file);
+                try {
+                    const res = await fetch(`https://api.imgbb.com/1/upload?key=${MY_API_KEY}`, { method: 'POST', body: formData });
+                    const result = await res.json();
+                    if (result.success) {
+                        const div = document.createElement('div');
+                        div.className = 'archive-card';
+                        div.innerHTML = `<button class="del-poster" style="display:block" onclick="this.parentElement.remove()">×</button><img src="${result.data.url}">`;
+                        document.getElementById('poster-container').appendChild(div);
+                        alert("Berhasil! Klik GET_FULL_CODE.");
+                    }
+                } catch (e) { alert("Gagal!"); }
+            };
+            fileInput.click();
+        };
+
+        function exportFullCode() {
+            const fullDoc = document.documentElement.cloneNode(true);
+            fullDoc.querySelectorAll('.del-poster, #admin-ui, #add-poster-btn').forEach(el => el.remove());
+            const intro = fullDoc.querySelector('#full-intro');
+            if(intro) intro.classList.remove('hidden');
+            const finalHtml = "<!DOCTYPE html>\n" + fullDoc.outerHTML;
+            const area = document.createElement('textarea');
+            area.value = finalHtml;
+            area.style = "position:fixed;top:5%;left:5%;width:90%;height:80%;z-index:99999;background:#111;color:#00f2ff;padding:15px;font-size:10px;border:1px solid var(--p);";
+            const btn = document.createElement('button');
+            btn.innerText = "COPY FULL CODE & CLOSE";
+            btn.style = "position:fixed;bottom:10%;right:10%;z-index:100000;padding:15px;background:var(--p);color:#000;border:none;font-family:Syncopate;font-size:10px;cursor:pointer;";
+            btn.onclick = () => {
+                area.select();
+                document.execCommand('copy');
+                alert("KODE COPIED! Paste ke GitHub.");
+                area.remove(); btn.remove();
+            };
+            document.body.appendChild(area);
+            document.body.appendChild(btn);
+        }
+    </script>
+
+</body></html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITIZENS_DB - CORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --p: #00f2ff; --s: #7000ff; --bg: #020205; --surf: #0a0a12; --brd: rgba(255, 255, 255, 0.05); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; display: flex; justify-content: center; min-height: 100vh; }
+        .container { width: 100%; max-width: 420px; padding: 30px 20px; padding-bottom: 50px; }
+        
+        .nav-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+        .back-btn { text-decoration: none; color: #555; font-family: 'Syncopate'; font-size: 10px; border: 1px solid #222; padding: 8px 12px; border-radius: 4px; transition: 0.3s; }
+        .back-btn:hover { border-color: var(--p); color: var(--p); }
+        .header-title { font-family: 'Syncopate'; font-size: 16px; color: #fff; }
+
+        .search-area { background: var(--surf); border: 1px solid var(--brd); padding: 15px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; font-family: 'Syncopate'; font-size: 10px; }
+        
+        .student-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 40px; }
+        .student-card { background: #0d0d18; border: 1px solid var(--brd); padding: 15px; position: relative; }
+        .id-num { font-family: 'Syncopate'; font-size: 8px; color: var(--p); margin-bottom: 8px; display: block; }
+        .student-name { font-size: 11px; font-weight: 800; text-transform: uppercase; color: #eee; line-height: 1.4; }
+        
+        /* Architects Section */
+        .section-label { font-family: 'Syncopate'; font-size: 10px; color: #444; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        .section-label::after { content: ""; flex: 1; height: 1px; background: #1a1a1a; }
+        .row-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .card-sm { background: #0d0d18; border: 1px solid var(--brd); padding: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-header">
+        <a href="index.html" class="back-btn">< BACK</a>
+        <h1 class="header-title">CITIZENS_DB</h1>
+    </div>
+
+    <div class="search-area">
+        <span>TOTAL_RECORDS: 33</span>
+        <span style="color: var(--p);">STABLE</span>
+    </div>
+
+    <div class="student-grid">
+        <div class="student-card"><span class="id-num">USR_01</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_02</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_03</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_04</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_05</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_06</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_07</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_08</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_09</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_10</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_11</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_12</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_13</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_14</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_15</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_16</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_17</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_18</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_19</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_20</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_21</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_22</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_23</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_24</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_25</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_26</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_27</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_28</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_29</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_30</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_31</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_32</span><div class="student-name">NAMA MURID</div></div>
+        <div class="student-card"><span class="id-num">USR_33</span><div class="student-name">NAMA MURID</div></div>
+    </div>
+
+    <div class="section-label">System.Architects</div>
+    <div class="row-grid">
+        <div class="card-sm"><div class="student-name" style="font-size: 9px;">YOUR_NAME</div><div style="font-size: 7px; color:#555; margin-top:4px;">Lead Dev</div></div>
+        <div class="card-sm"><div class="student-name" style="font-size: 9px; color: var(--p);">GEMINI_AI</div><div style="font-size: 7px; color:#555; margin-top:4px;">Core Logic</div></div>
+    </div>
+</div>
+
+</body>
+</html>
