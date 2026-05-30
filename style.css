@@ -222,7 +222,7 @@ main {
         padding: 1rem 0.1rem;
     }
     .content{
-        margin-top: 85%;
+        margin-top: 50%;
     }
     .desk{
         margin: 0;
@@ -251,7 +251,7 @@ main {
     }
 
     .content {
-        margin-top: 25rem;
+        margin-top: 20%;
     }
     .obj3d{
         scale: 0.7;
