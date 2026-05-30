@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, 
+    -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: rgb(78, 78, 78);
+    min-height: 100vh;
+    line-height: 1.5;
+}
+.logo {
+    font-weight: 600;
+    color: white;
+}
+
+.gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layerblur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px white;
+    z-index: -1;
+
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    z-index: 999;
+
+}
+
+header h1 {
+    display: flex;
+    font-size: 3rem;
+    font-weight: 300;
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+
+}
+
+nav a {
+    font-size: 1rem;
+    letter-spacing: 0.1;
+    transition: color 0.2 ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+    color: rgb(27, 27, 27);
+
+}
+
+.btnsignin {
+    background-color: beige;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    cursor: pointer;
+
+}
+
+.btnsignin:hover {
+    background-color: rgb(61, 61, 61);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content {
+    color: white;
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+ 
+.tag-box {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, 
+    rgb(155, 148, 148), 
+    rgb(57, 92, 190),
+     rgb(129, 74, 151),
+     rgb(31, 26, 26),
+     rgb(155, 148, 148)
+     );
+     background-size: 200%;
+     animation: animasigradiasi 2.5s linear infinite;
+     box-shadow: 0 0 15px rgb(129, 111, 111);
+}
+
+@keyframes animasigradiasi {
+
+    to {
+        background-position: 200%;
+    }
+
+}
+
+.tag-box .tag {
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: 0.5s ease;
+    cursor: pointer;
+}
+
+.tag-box .tag:hover {
+    color: blueviolet;
+}
+
+.content h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgb(78, 75, 75);
+}
+
+.desk {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: gray;
+    margin: 2rem;
+
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.btnstarted {
+    text-decoration: none;
+    border: 1px solid rgb(73, 66, 66);
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2 ease;
+}
+
+.btnstarted:hover {
+    color: white;
+}
+
+.btnmain {
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+    padding: 0.6rem 2.5rem;
+    border-radius: 
+    50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+
+
+}
+
+.btnmain:hover {
+    background-color: rgb(54, 53, 53);
+}
+
+.obj3d {
+    position: absolute;
+    top: 0;
+    right: -20%;
+
+}
+@media (max-width: 920px){
+    header {
+        padding: 1rem 0.1rem;
+    }
+    .content{
+        margin-top: 85%;
+    }
+    .desk{
+        margin: 0;
+    }
+    .obj3d{
+        scale: 1;
+        top: -20%;
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        padding: 1rem 0.1rem;
+    }
+
+    nav{
+        display: none;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    .btnsignin{
+        padding: 0.6rem 1.5rem;
+
+    }
+
+    .content {
+        margin-top: 25rem;
+    }
+    .obj3d{
+        scale: 0.7;
+        top: -25%;
+        right: 0;
+
+
+    }
+    .content{
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+    .tag-box{
+        width: 12rem;
+    }
+    .content h1 {
+        font-size: 2.5rem;
+    }
+    .desk {
+        font-size: 1rem;
+
+    }
+    .btnstarted{
+        font-size: 0.8rem;
+        padding: 0.5rem 1.2rem;
+    }
+    .btnmain{
+        font-size: 0.8rem;
+        padding: 0.5rem 2rem;
+    }
+}
